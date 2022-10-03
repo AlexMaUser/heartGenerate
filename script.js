@@ -7,7 +7,16 @@ bodyEl.addEventListener("mousemove", function (e) {
 
   // create span element
   const spanEl = document.createElement("span");
-  let a = spanEl.style;
+
+  // switch between images so we can generate 2 images
+  const i = Math.floor(Math.random() * 3);
+  console.log(i);
+  const images = ["star", "heart", "galaxy"];
+  console.log(images[i]);
+  //const image = typeImage > 0 ? "star" : "heart";
+
+  spanEl.style.backgroundImage = `url('${images[i]}.png')`;
+
   spanEl.style.left = x + "px";
   spanEl.style.top = y + "px";
 
@@ -23,5 +32,4 @@ bodyEl.addEventListener("mousemove", function (e) {
   setTimeout(function () {
     spanEl.remove();
   }, 3000);
-  console.log(a);
 });
