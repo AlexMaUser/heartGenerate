@@ -8,7 +8,7 @@ bodyEl.addEventListener("mousemove", function (e) {
   // create span element
   const spanEl = document.createElement("span");
 
-  // switch between images so we can generate 2 images
+  // switch between images so we can generate 3 images
   const i = Math.floor(Math.random() * 3);
   console.log(i);
   const images = ["star", "heart", "galaxy"];
